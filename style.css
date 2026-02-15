@@ -31,13 +31,12 @@ body{
     border-radius:50%;
     display:block;
     margin:0 auto 15px;
-    border:3px solid ;
+    border:3px solid #f1f5f9;
 }
 
 .sidebar h2{
     text-align: center;
     margin-bottom: 40px;
-    /* font-size: 26px; */
 }
 
 .sidebar nav{
@@ -65,7 +64,19 @@ main{
     margin-left: 250px;
     padding: 50px;
     width: calc(100% - 250px);
+    /* width:83% */
     transition: 0.3s ease;
+}
+
+.active div a{
+    padding:5px;
+    color:#334155;
+    font-size:clamp(14px,1.2vw,18px);
+}
+
+.active div a:hover{
+    color:black;
+    /* font-size:clamp(16px,1.5vw,22px); */
 }
 
 section{ 
@@ -93,42 +104,69 @@ main h4{
 }
 
 main p{
-    font-size:clamp(14px,1.2vw,18px);
+    font-size:clamp(14px,1.3vw,18px);
 }
 
-#menuButton{ /* for mobile only */
-    /* display:none; */
-    position:fixed;
-    top:15px;
-    left:200px;
-    background:#f1f5f9;
-    color:#1e293b;
-    border:none;
-    padding:10px;
-    border-radius:8px;
-    cursor:pointer;
-}
 
 
 /* Mobile */
 @media(max-width:768px){
 
-    #sidebar{
-        position:fixed;
-        left:0;
-        top:0;
-        height:100%;
-        transform:translateX(-100%);
-        transition:2s;
+    .sidebar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 250px;
+        background:#1e293b;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000; 
     }
 
-    #sidebar.active{
-        transform:translateX(0);
+    .sidebar.active{
+        transform: translateX(0);
     }
 
     main{
         margin-left:0;
         width:100%;
+        padding: 0%;
+    }
+     
+    section{
+        padding-left: 10px;
+    }
+    
+    .active{
+        background:#1e293b;
+        color:#f1f5f9;
+        padding: 50px 20px;
+    }
+
+    .active div a{
+        color: #f1f5f9;
+    }
+
+    .active div a:hover{
+        color: #cbd5f59c;
+    }
+
+    #home {
+        position: relative;
+    }
+
+    #menuButton {
+        position: absolute;
+        top:15px;
+        right:15px;
+        background:#f1f5f9;
+        color:#1e293b;
+        border:none;
+        padding:10px;
+        border-radius:8px;
+        cursor:pointer;
+        z-index: 1100;
     }
 
     
