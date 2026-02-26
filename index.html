@@ -3,115 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sehrish Naseer - Software Engineer, Python Developer, AI/ML Engineer</title>
+    <title>Sehrish Naseer - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        
-        <div class="container">
 
-        <aside class="sidebar">
-            
-            <img src="images/profile.jpg" class="profile">
-            <h2 >Sehrish</h2>
-            <nav>
-                <a href="#home" class="active">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
+    <aside class="sidebar" id="sidebar">
+        <img src="profile pic 1.jpeg" alt="Sehrish Naseer" class="avatar">
+        <h2 class="sidebar-name">Sehrish Naseer</h2>
+        <p class="sidebar-role">AI/ML · Python · Web</p>
 
-            </nav>
-        </aside>
-        
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
+        <div class="social">
+            <a href="https://www.linkedin.com/in/sehrish-naseer-s345n/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/sehrishnaseer-381" target="_blank">GitHub</a>
+        </div>
+    </aside>
+
+    <!-- MOBILE TOP BAR -->
+    <header class="topbar">
+        <span>Sehrish Naseer</span>
+        <button id="menuBtn" onclick="toggleSidebar()">☰</button>
     </header>
 
+    <!-- OVERLAY closes sidebar on mobile when clicked -->
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
 
+    <!-- MAIN CONTENT -->
     <main>
-    <section id="home" class="active">
-        <button id="menuButton">☰</button>     <!-- for mobile -->
-        <h1>Sehrish Naseer</h1>
-        <b><p>Software Engineer | Python Developer | AI/ML Engineer</b></p>
-        <div class="social-links">
-            LinkedIn: <a href="https://www.linkedin.com/in/sehrish-naseer-s345n/" target="_blank">sehrish-naseer-s345n</a>|    GitHub: <a href="https://github.com/sehrishnaseer-381" target="_blank">sehrishnaseer-381</a>
-        </div>
 
-    </section>
+        <!-- HOME -->
+        <section id="home">
+            <p class="label">Welcome to my portfolio</p>
+            <h1>Sehrish<br><span class="accent">Naseer</span></h1>
+            <p class="subtitle">Software Engineer · Python Developer · AI/ML Engineer</p>
+            <div class="btn-group">
+                <a href="https://www.linkedin.com/in/sehrish-naseer-s345n/" target="_blank" class="btn">LinkedIn</a>
+                <a href="https://github.com/sehrishnaseer-381" target="_blank" class="btn btn-outline">GitHub</a>
+            </div>
+        </section>
 
-    <section id="about">
-        <h2>About</h2>
-        <p>Welcome! It's great to have you here. I'm Sehrish Naseer, a Software Engineer, Python Developer, and AI/ML Engineer. With a strong background in software development and a passion for artificial intelligence, I specialize in creating innovative solutions that leverage the power of AI and machine learning.
-            </p>
-    </section>
+        <!-- ABOUT -->
+        <section id="about">
+            <p class="label">About me</p>
+            <h2>A builder at the intersection of code & intelligence</h2>
+            <p>I'm Sehrish Naseer — a Software Engineer, Python Developer, and AI/ML Engineer with a passion for building systems that learn. I enjoy turning complex data problems into clean, working solutions, whether that's a REST API or a trained ML model.</p>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming Languages: Python, C++</li>
-            <li>AI/ML </li>
-            <li>Web Development: HTML, CSS, JavaScript</li>
-            <li>Data Analysis: Pandas, NumPy</li>
-        </ul>
-    </section>
+        <!-- SKILLS -->
+        <section id="skills">
+            <p class="label">Expertise</p>
+            <h2>Skills & Technologies</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="icon">⚡</div>
+                    <h3>Languages</h3>
+                    <p>Python, C++, JavaScript</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🤖</div>
+                    <h3>AI / ML</h3>
+                    <p>Scikit-learn, Logistic Regression, Random Forest</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🌐</div>
+                    <h3>Web Dev</h3>
+                    <p>HTML, CSS, JavaScript, FastAPI</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📊</div>
+                    <h3>Data Analysis</h3>
+                    <p>Pandas, NumPy, Data Cleaning</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2> 
-        <h4>Resume Screening</h4>
-        <p>
-            <b>Tech:</b> Python, FastApi, Html, CSS, Javascript
-            <ul>
-                <li>Developed a web-based machine learning tool to classify resumes into categories such as Data Scientist, Web Designer, and HR.</li>
-                <li>Implemented Logistic Regression and Random Forest models for prediction. </li>
-                <li>Created a user-friendly web interface for .txt file uploads and model selection. </li>
-                <li>Delivered real-time category predictions to streamline HR and recruitment processes.</li>
-            </ul>
-        </p>
+        <!-- PROJECTS -->
+        <section id="projects">
+            <p class="label">Work</p>
+            <h2>Featured Projects</h2>
 
-        <h4>Weather Prediction</h4>
-        <p>
-            <p>
-            <b>Data Cleaning & PreProcessing</b> <br>
-            <b>Tech:</b> Python
-            </p>
-            <ul>
-                <li>Cleaned and prepared the dataset for analysis </li>
-                <li>Implemented and trained all four predictive models  </li>
-                <li>Evaluated model performance and visualized results </li>
-                <li>Identified the best model for accurate weather prediction </li>
-            </ul>
-        </p>
-    </section>
+            <div class="project">
+                <div class="tags">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Web App</span>
+                </div>
+                <h3>Resume Screening</h3>
+                <p class="tech">Python · FastAPI · HTML · CSS · JavaScript</p>
+                <ul>
+                    <li>Built a web tool to classify resumes into categories like Data Scientist, Web Designer, and HR.</li>
+                    <li>Used Logistic Regression and Random Forest models for prediction.</li>
+                    <li>Created a simple interface for uploading .txt files and selecting a model.</li>
+                    <li>Delivers real-time category predictions to help with recruitment.</li>
+                </ul>
+            </div>
 
-    <section id="education">
-        <h2>Education</h2>
-        <h4>University of Central Punjab, Lahore</h4>
-        <p>Bachelor of Science in Computer Science (2022-2026)</p>
-        <h4>Azam Garrison for Girls, Lahore</h4>
-        <p>Intermediate in Sciences (2020-2022)</p>
-        <h4>Cantt Public Girls High School, Lahore</h4>
-        <p>Matriculation in Sciences (2018-2020)</p>
+            <div class="project">
+                <div class="tags">
+                    <span class="tag">Data Science</span>
+                    <span class="tag">Predictive Modelling</span>
+                </div>
+                <h3>Weather Prediction</h3>
+                <p class="tech">Python · Scikit-learn · Pandas · NumPy</p>
+                <ul>
+                    <li>Cleaned and pre-processed a raw weather dataset.</li>
+                    <li>Trained and compared four different ML models.</li>
+                    <li>Evaluated accuracy and visualized results to find the best model.</li>
+                </ul>
+            </div>
+        </section>
 
-    </section>
+        <!-- EDUCATION -->
+        <section id="education">
+            <p class="label">Background</p>
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="year">2022 – 2026</span>
+                    <h3>University of Central Punjab, Lahore</h3>
+                    <p>Bachelor of Science in Computer Science</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="year">2020 – 2022</span>
+                    <h3>Azam Garrison for Girls, Lahore</h3>
+                    <p>Intermediate in Sciences</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="year">2018 – 2020</span>
+                    <h3>Cantt Public Girls High School, Lahore</h3>
+                    <p>Matriculation in Sciences</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>
-            <ul>
-                <li>Email: <a href="mailto:sehrishnaseer@gmail.com">sehrishnaseer@gmail.com</a></li>
-                <li>Phone: <b>+92 311 2697227</b></li>
-                
-            </ul>
-        </p>
+        <!-- CONTACT -->
+        <section id="contact">
+            <p class="label">Get in touch</p>
+            <h2>Let's work together</h2>
+            <p>Have a project in mind or just want to connect? Feel free to reach out.</p>
+            <div class="contact-list">
+                <a href="mailto:sehrishnaseer@gmail.com" class="contact-item">
+                    <span>✉</span> sehrishnaseer@gmail.com
+                </a>
+                <a href="tel:+923112697227" class="contact-item">
+                    <span>📞</span> +92 311 2697227
+                </a>
+            </div>
+        </section>
 
-    </section>
+        <footer>
+            <p>© 2026 Sehrish Naseer</p>
+        </footer>
 
     </main>
-    </div>
-
-    <footer></footer>
 
     <script src="script.js"></script>
 </body>

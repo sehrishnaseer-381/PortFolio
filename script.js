@@ -1,37 +1,20 @@
-const menuButton = document.getElementById("menuButton");
-const sidebar = document.querySelector(".sidebar");
-const navs = document.querySelectorAll(".sidebar nav a");
+// Toggle sidebar on mobile
+function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    var overlay = document.getElementById('overlay');
 
-function checkScreen() {
-    if (window.innerWidth <= 768) {
-        menuButton.style.display = "block";
-        sidebar.classList.remove("active"); // hidden by default on mobile
-    } 
-    else {
-        menuButton.style.display = "none";
-        sidebar.classList.add("active"); // always visible on desktop
-    }
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('show');
 }
 
-// Run immediatetly
-checkScreen();
+// Close sidebar when a nav link is clicked on mobile
+var navLinks = document.querySelectorAll('.sidebar nav a');
 
-// Run on resize
-window.addEventListener("resize", checkScreen);  
-
-
-// For mobile
-// Toggle sidebar on click 
-menuButton.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
-
-});
-
-// Close sidebar when nav link is clicked
-navs.forEach(link => {
-    link.addEventListener("click", () => {
+navLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
         if (window.innerWidth <= 768) {
-            sidebar.classList.remove("active");
+            document.getElementById('sidebar').classList.remove('open');
+            document.getElementById('overlay').classList.remove('show');
         }
     });
 });
